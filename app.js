@@ -63,6 +63,13 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+// var forceSsl = function (req, res, next) {
+//     if (req.headers['x-forwarded-proto'] !== 'https') {
+//         return res.redirect(['https://', req.get('Host'), req.url].join(''));
+//     }
+//     return next();
+//  };
+
 // error handlers
 // production 404 handler
 app.use(function(err, req, res, next) {
